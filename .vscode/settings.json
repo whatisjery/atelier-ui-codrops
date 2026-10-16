@@ -1,0 +1,25 @@
+{
+    "[javascript]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports.biome": "explicit"
+        }
+    },
+    "[javascriptreact]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports.biome": "explicit"
+        }
+    },
+    "[typescript]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports.biome": "explicit"
+        }
+    },
+    "[typescriptreact]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports.biome": "explicit"
+        }
+    },
+    "[markdown]": {
+        "editor.formatOnSave": false
+    }
+}

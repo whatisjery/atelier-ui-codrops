@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #FFFFFF;
+  --color-foreground: #171717;
+  --color-foreground-light: #a9a9a9;
+}
+
+@theme inline {
+  --font-sans: var(--font-instrument-sans);
+}
+
+@utility font-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+}
+
+@utility site-grid {
+  @apply grid grid-cols-6 gap-2 px-2;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
