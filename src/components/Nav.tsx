@@ -45,7 +45,7 @@ export default function Nav() {
                     <TransitionLink
                         key={href}
                         href={href}
-                        className='relative block hover:bg-foreground hover:text-background'
+                        className='relative block w-fit md:w-auto hover:bg-foreground hover:text-background'
                         onPointerEnter={() => setHovered(href)}
                         onPointerLeave={() => setHovered(null)}
                     >

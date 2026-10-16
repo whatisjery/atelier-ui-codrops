@@ -57,7 +57,7 @@ export default function HomePage() {
                             href={href}
                             target='_blank'
                             rel='noreferrer'
-                            className='relative block hover:bg-foreground hover:text-background'
+                            className='relative block w-fit md:w-auto hover:bg-foreground hover:text-background'
                             onPointerEnter={() => setHoveredLink(href)}
                             onPointerLeave={() => setHoveredLink(null)}
                         >
