@@ -6,6 +6,6 @@ export const PAGE_LINKS = [
 ]
 
 export const EXTERNAL_LINKS = [
-    { href: 'https://github.com/whatisjery/atelier-codrops', label: 'github repo' },
+    { href: 'https://github.com/whatisjery/atelier-ui-codrops', label: 'github repo' },
     { href: 'https://atelier-ui.com', label: 'atelier ui (v1) website' },
 ]
