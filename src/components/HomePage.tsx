@@ -218,7 +218,7 @@ export default function HomePage() {
                         <p className='col-start-1 sm:col-start-4'>
                             code &amp; design by{' '}
                             <a
-                                href='https://github.com/whatisjery'
+                                href='https://jeremienallet.com'
                                 target='_blank'
                                 rel='noreferrer'
                                 className='pointer-events-auto hover:bg-foreground hover:text-background'
