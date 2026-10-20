@@ -90,7 +90,7 @@ export default function HomePage() {
                 />
             )}
 
-            <header className='mt-55'>
+            <header className='lg:mt-[16vw] mt-[30vw]'>
                 <div className='flex justify-end leading-none relative right-[5.5vw]'>
                     <WebglText
                         webglEnabled={webglEnabled}

@@ -1,5 +1,7 @@
 export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
+export const ATELIER_URL = 'https://atelier-ui.com'
+
 export const ARTICLE_URL = 'https://tympanus.net/codrops/?p=124298'
 
 export const PAGE_LINKS = [
@@ -8,6 +10,6 @@ export const PAGE_LINKS = [
 ]
 
 export const EXTERNAL_LINKS = [
-    { href: 'https://github.com/whatisjery/atelier-ui-codrops', label: 'github repo' },
-    { href: 'https://atelier-ui.com', label: 'atelier ui (v1) website' },
+    { href: 'https://github.com/whatisjery/atelier-ui-codrops', label: 'source code' },
+    { href: ARTICLE_URL, label: 'read on codrops' },
 ]

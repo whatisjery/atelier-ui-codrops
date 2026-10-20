@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { ARTICLE_URL, PAGE_LINKS } from '@/constants'
+import { ARTICLE_URL, ATELIER_URL, PAGE_LINKS } from '@/constants'
 import { useLocalTime } from '@/hooks/use-local-time'
 import { toggleWebgl, useWebglEnabled } from '@/hooks/use-webgl-enabled'
 import PlusIcon from './PlusIcon'
@@ -25,9 +25,17 @@ export default function Nav() {
         >
             <div className='self-start'>
                 <div className='flex gap-2'>
-                    <TransitionLink href='/' className='hover:bg-foreground hover:text-background'>
-                        codrops demo
-                    </TransitionLink>
+                    <a
+                        href={ATELIER_URL}
+                        target='_blank'
+                        rel='noreferrer'
+                        className='hover:bg-foreground hover:text-background'
+                    >
+                        Atelier UI{' '}
+                        <span aria-hidden='true' className='inline-block rotate-45'>
+                            &uarr;
+                        </span>
+                    </a>
 
                     <button
                         type='button'
@@ -38,10 +46,6 @@ export default function Nav() {
                         webgl {webglOn ? 'on' : 'off'}
                     </button>
                 </div>
-
-                <a href={ARTICLE_URL} className='block w-fit hover:bg-foreground hover:text-background'>
-                    article
-                </a>
             </div>
 
             <PlusIcon className='col-start-3' />
@@ -68,7 +72,14 @@ export default function Nav() {
             <PlusIcon className='col-start-6 md:col-start-5 justify-self-end' />
 
             <div className='hidden md:block col-start-6 text-right'>
-                <p>atelier ui notice &copy;2026</p>
+                <a
+                    href={ARTICLE_URL}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='block hover:bg-foreground hover:text-background'
+                >
+                    read on codrops
+                </a>
                 <p>{time}</p>
             </div>
         </nav>
