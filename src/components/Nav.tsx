@@ -78,7 +78,10 @@ export default function Nav() {
                     rel='noreferrer'
                     className='block hover:bg-foreground hover:text-background'
                 >
-                    read on codrops
+                    read on codrops{' '}
+                    <span aria-hidden='true' className='inline-block rotate-45'>
+                        &uarr;
+                    </span>
                 </a>
                 <p>{time}</p>
             </div>
