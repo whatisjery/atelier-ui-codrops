@@ -183,7 +183,7 @@ export default function HomePage() {
                 ))}
             </section>
 
-            <section className='relative z-1 mt-10 h-80 md:mt-20 md:h-160 flex flex-col justify-between bg-background'>
+            <section className='relative z-1 pt-10 h-90 md:pt-20 md:h-180 flex flex-col justify-between bg-background'>
                 <div className='site-grid'>
                     <PlusIcon className='col-start-3' />
                     <PlusIcon className='col-start-6 md:col-start-5 justify-self-end' />
