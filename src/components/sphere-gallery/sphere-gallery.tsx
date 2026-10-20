@@ -25,7 +25,7 @@ const MAX_TILT = Math.PI / 4
 const SCENE_DISTANCE = 0.1 as const
 const INITIAL_DISTANCE = 2 as const
 const PEEK_DEPTH = 1.5 as const
-const PEEK_MARGIN = 0.15 as const
+const PEEK_MARGIN = 0.05 as const
 const FOCUS_EASING = [0.7, 0.03, 0.26, 0.99] as Easing
 const REVEAL_EASING = [0.4, 0.2, 0.15, 1] as Easing
 
@@ -749,9 +749,10 @@ function SphereScene({
     const focusDistanceFor = useCallback(
         (tile: LayoutTile) => {
             const tileSize = Math.max(tile.width, tile.height) * 1.9
-            return tileSize / 2 / Math.tan(MathUtils.degToRad(fov) / 2)
+            const portraitFit = Math.max(1, size.height / size.width)
+            return (tileSize / 2 / Math.tan(MathUtils.degToRad(fov) / 2)) * portraitFit
         },
-        [fov],
+        [fov, size.width, size.height],
     )
 
     const tileLayout = useMemo(() => {
