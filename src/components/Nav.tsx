@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { PAGE_LINKS } from '@/constants'
+import { ARTICLE_URL, PAGE_LINKS } from '@/constants'
 import { useLocalTime } from '@/hooks/use-local-time'
 import { toggleWebgl, useWebglEnabled } from '@/hooks/use-webgl-enabled'
 import PlusIcon from './PlusIcon'
@@ -23,19 +23,25 @@ export default function Nav() {
         <nav
             className={`fixed inset-x-0 top-0 z-60 site-grid pt-2 ${isGallery ? 'bg-linear-to-b from-background to-transparent pb-15' : 'pb-2'}`}
         >
-            <div className='flex gap-2 self-start'>
-                <TransitionLink href='/' className='hover:bg-foreground hover:text-background'>
-                    codrops demo
-                </TransitionLink>
+            <div className='self-start'>
+                <div className='flex gap-2'>
+                    <TransitionLink href='/' className='hover:bg-foreground hover:text-background'>
+                        codrops demo
+                    </TransitionLink>
 
-                <button
-                    type='button'
-                    onClick={toggleWebgl}
-                    disabled={isGallery}
-                    className={`hidden md:block cursor-pointer disabled:cursor-not-allowed uppercase ${webglOn ? 'text-foreground-light enabled:hover:text-foreground' : 'text-red-600'}`}
-                >
-                    webgl {webglOn ? 'on' : 'off'}
-                </button>
+                    <button
+                        type='button'
+                        onClick={toggleWebgl}
+                        disabled={isGallery}
+                        className={`hidden md:block cursor-pointer disabled:cursor-not-allowed uppercase ${webglOn ? 'text-foreground-light enabled:hover:text-foreground' : 'text-red-600'}`}
+                    >
+                        webgl {webglOn ? 'on' : 'off'}
+                    </button>
+                </div>
+
+                <a href={ARTICLE_URL} className='block w-fit hover:bg-foreground hover:text-background'>
+                    article
+                </a>
             </div>
 
             <PlusIcon className='col-start-3' />
